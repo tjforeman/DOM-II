@@ -45,10 +45,26 @@ home.addEventListener('click',function(event){
   console.log(`home button was clicked`);
   event.preventDefault();
 });
-const container2= document.querySelector('.container');
+const container2=document.querySelector('.container');
 container.addEventListener('click',function(event){
   console.log(`event target:${event.target}`);
 });
+const wheel=document.querySelector('.container');
+wheel.addEventListener('wheel',function(event){
+  console.log(`the mouse wheel was used`);
+});
+const mouseout=document.querySelector('.container')
+mouseout.addEventListener('mouseout', function(event){
+    console.log(`the mouse has left${event.target}`);
+});
+const colors=document.querySelector('.container')
+colors.addEventListener('auxclick',function (event){
+    event.target.style.color = "red";
+});
+const drag=document.querySelector('.main-navigation');
+    drag.addEventListener("dragstart", function(event){
+    console.log(`${event.target} from the nav has been dragged`);
+    });
 
   window.addEventListener("load", function(event) {
     console.log("The page has loaded!");
