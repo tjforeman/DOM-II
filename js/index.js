@@ -24,7 +24,11 @@ btn3.addEventListener('click',function(event){
   console.log(`Island Getaways been clicked`)
   event.stopPropagation();
 });
-
+const hi=document.querySelector('.intro')
+hi.addEventListener('mouseover',function(event){
+    TweenMax.to(".bus", 2, {x:500, ease:Bounce.easeOut});
+    event.stopPropagation();
+  });
 const letsgo= document.querySelector('.text-content');
 letsgo.addEventListener('mouseover',function(event){
   event.target.style.color='green';
