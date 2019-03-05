@@ -25,15 +25,40 @@ btn3.addEventListener('click',function(event){
   event.stopPropagation();
 });
 
-const destination= document.querySelector('.text-content');
-destination.addEventListener('mouseover',function(event){
+const letsgo= document.querySelector('.text-content');
+letsgo.addEventListener('mouseover',function(event){
   event.target.style.color='green';
   event.stopPropagation();
 });
+const adventure= document.getElementById('adventure');
+adventure.addEventListener('mouseover',function(event){
+  event.target.style.color='yellow';
+  event.stopPropagation();
+});
+const logo= document.querySelector('.logo-heading');
+logo.addEventListener('blur',function(event){
+  event.target.style.background.color='black';
+  event.stopPropagation();
+});
+const home= document.getElementById('nav-1');
+home.addEventListener('click',function(event){
+  console.log(`home button was clicked`);
+  event.preventDefault();
+});
+const container2= document.querySelector('.container');
+container.addEventListener('click',function(event){
+  console.log(`event target:${event.target}`);
+});
 
-window.addEventListener("load", function(event) {
+  window.addEventListener("load", function(event) {
     console.log("The page has loaded!");
   });
+
   window.addEventListener("keydown", function(event) {
     console.log(`A key was pressed ! this is the key: ${event.key}`);
   });
+
+  window.addEventListener("resize", function(event) {
+    console.log(`someone  resized the page: `)
+  });
+  
